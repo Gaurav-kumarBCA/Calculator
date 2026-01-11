@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("file_0000000054f07208bcdc4a1b4a2bb10d.png");
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+}
+.header{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline double;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mainContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.calBody{
+    height: 500px;
+    width: 380px;
+    margin-top: 20px;
+    position: relative;
+    border-radius: 10px;
+    background-color: black;
+}
+#calDisplay{
+    height: 60px;
+    width: 350px;
+    margin-left: 14px;
+    background-color: rgb(66, 65, 65);
+    margin-top: 20px;
+    text-decoration: none;
+    border: none;
+    color: white;
+    font-size: 20px;    
+}
+.calbtnBody{
+    display: grid;
+    grid-template-columns: repeat(4,2fr);
+    gap: 20px;
+    padding: 15px;
+}
+.box{
+    height: 60px;
+    width: 60px;
+    color: aliceblue;
+    border-radius: 50%;
+    background-color: rgb(66, 65, 65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.4s;
+}
+.box:hover{
+    transform: scale(1.1);
+}
+.calbtnBody .box:nth-child(4n){
+    background-color: red;
+}
+#box1{
+    background-color: gray;
+}
+
+@media (max-width: 480px){
+    .header h1{
+        font-size: 40px;
+    }
+    .calBody{
+        margin-bottom: 1000px;
+    }
+    #calDisplay{
+        font-size: 20px;
+        height: 55px;
+    }
+    .box{
+        font-size: 16px;
+    }
+    body{
+    background-image: url("mobile.png");
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px){
+    .calBody{
+        max-width: 350px;
+    }
+    #calDisplay{
+        font-size: 20px;
+        width: 312px;
+    }
+}
